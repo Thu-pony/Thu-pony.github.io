@@ -419,7 +419,7 @@
 <p><code>cnpm install -g hexo-cli</code></p>
 <p>使用<code>hexo -v</code>验证一下安装是后成功。</p>
 <p>其中source文件是我们新建博客的存放地址，public是hexo将博客md文件转换为静态网页后，相关文件存放的地方,theme是我们的博客的风格，可以在_config.yml文件中切换。</p>
-<h2 id="第三步hexo中常用命令"><a href="#第三步hexo中常用命令" class="headerlink" title="## 第三步hexo中常用命令"></a>## 第三步hexo中常用命令</h2><p>在我们新建的文件夹下面执行<code>hexo init</code>初始化一个hexo博客，此时会产生下面文件。</p>
+<h2 id="第三步hexo中常用命令"><a href="#第三步hexo中常用命令" class="headerlink" title="第三步hexo中常用命令"></a>第三步hexo中常用命令</h2><p>在我们新建的文件夹下面执行<code>hexo init</code>初始化一个hexo博客，此时会产生下面文件。</p>
 <p><img src="/../images/blogFloder.png" alt="hexo init"></p>
 <p><code>hexo clean</code>将public文件夹中的内容删除</p>
 <p><code>hexo generate</code>或则<code>hexo g</code>hexo会检测我们的source里面的_post的文件是后有变化，如果发生了变化再执行这条命令,hexo会根据这些变化重新生成静态网页，放到public中</p>
@@ -428,7 +428,7 @@
 <p>然后在调用<code>hexo server</code>或则<code>hexo s</code>开启hexo服务器，hexo默认调用本机端口4000,在浏览器输入127.0.0.1:4000或则localhost:4000就可以最后的效果了。但这都是在本地玩玩，我们还需要将博客部署到远端，让他人也可以访问。</p>
 <p><img src="/../images/hexo_final.png" alt="hexo -s后的结果"></p>
 <p>P.S: 本人已经修改过主题和一些配置。</p>
-<h2 id="第四步部署到github上"><a href="#第四步部署到github上" class="headerlink" title="## 第四步部署到github上"></a>## 第四步部署到github上</h2><p>1.在github上新建仓库，仓库命为github用户名.github.io一个字也不能错。</p>
+<h2 id="第四步部署到github上"><a href="#第四步部署到github上" class="headerlink" title="第四步部署到github上"></a>第四步部署到github上</h2><p>1.在github上新建仓库，仓库命为github用户名.github.io一个字也不能错。</p>
 <p>2.执行命令安装部署到git上的工具, <code>cnpm install --save hexo-deployer-git</code></p>
 <p>3.设置_config.yml中delolyer属性。添加下面三行</p>
 <p><code>  type: git   repo: https://github.com/github用户名/github用户名.github.io.git   branch: main</code></p>
@@ -436,7 +436,7 @@
 <p>执行<code>hexo d</code>或则<code>hexo deploy</code>命令，往远端推送。</p>
 <p>此后在浏览器上输入github用户名.github.io既可以访问你的个人博客。PS(推送成功后，可能需要等几分钟，你写的推送才会转换为最终网页)</p>
 <p>至此hexo+github搭建个人博客已经结束。剩下的怎么让自己的博客变得更美观，写出好的博客，全靠个人努力了。</p>
-<h2 id="第五步博客换风格"><a href="#第五步博客换风格" class="headerlink" title="## 第五步博客换风格"></a>## 第五步博客换风格</h2><p>如果你部喜欢hexo默认landspace风格，可以尝试去换其他的风格，具体有那些风格已经预览图可以在github搜索一下,<a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next">next风格</a>，<a target="_blank" rel="noopener" href="https://github.com/litten/hexo-theme-yilia">yilia风格</a>,<a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery">matert风格</a>,换风格步骤也很简单，首先把这些代码的代码下载下来，把对应的文件夹，例如next文件夹放到博客下面的themes下面去，注意打开next文件夹，可以直接看到相关文件，而不是next文件夹里面又套了一层next文件夹。然后返回到博客的根目录，修改_config.yml文件下面的theme属性的值，修改为你刚刚下载的风格，例如修改为next。</p>
+<h2 id="第五步博客换风格"><a href="#第五步博客换风格" class="headerlink" title="第五步博客换风格"></a>第五步博客换风格</h2><p>如果你部喜欢hexo默认landspace风格，可以尝试去换其他的风格，具体有那些风格已经预览图可以在github搜索一下,<a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next">next风格</a>，<a target="_blank" rel="noopener" href="https://github.com/litten/hexo-theme-yilia">yilia风格</a>,<a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery">matert风格</a>,换风格步骤也很简单，首先把这些代码的代码下载下来，把对应的文件夹，例如next文件夹放到博客下面的themes下面去，注意打开next文件夹，可以直接看到相关文件，而不是next文件夹里面又套了一层next文件夹。然后返回到博客的根目录，修改_config.yml文件下面的theme属性的值，修改为你刚刚下载的风格，例如修改为next。</p>
 <p><code>theme: next</code></p>
 <h2 id="个人踩坑"><a href="#个人踩坑" class="headerlink" title="个人踩坑"></a>个人踩坑</h2><p>如果要在博文中引用图片资源或则其他资源。有如下方式,在source文件夹新建一个存放对应资源的文件夹，然后使用相对路径或则绝对路径去访问相关资源。</p>
 <p>也可以修改_config.yml中的post_asset_folder为true,这样new一个blog的时候，还会生成与这个blog同名的资源文件夹，后使用相对路径或则绝对路径去访问相关资源。</p>
